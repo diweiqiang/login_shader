@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        html,body{
+            height:100%;
+        }
+        #log{
+            position: absolute;
+            left:45%;
+            top:45%;
+            padding:10px;
+        }
+        #mask{
+            position: fixed;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.3);
+            display: none;
+        }
+        #login{
+            position:absolute;
+            width:350px;
+            padding:10px;
+            left:40%;
+            top:40%;
+            background:#fff;
+            border:1px solid #ddd;
+            display: none;
+        }
+        #close{
+            position:absolute;
+            right:10px;
+            top:10px;
+            color:#d3d3d3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <button id="log" class="btn btn-info">登录</button>
+    <div id="mask"></div>
+    <div id="login">
+        <label>用户名 <input type="text" value="diweiqiang"></label><br>
+        <label>密码 <input type="text"></label><br><br>
+        <button class="btn btn-warning">登录</button>
+        <div id="close">X</div>
+    </div>
+</div>
+
+<script src="jquery-3.1.0.js"></script>
+<script>
+    $('#log').click(function () {
+        $('#mask').show();
+        $('#login').show();
+    });
+    
+    $('#close').click(function () {
+        $('#mask').hide();
+        $('#login').hide();
+    });
+</script>
+</body>
+</html>
